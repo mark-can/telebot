@@ -131,7 +131,7 @@ class WebhookHandler(webapp2.RequestHandler):
         elif 'who are you' in text:
             reply('telebot starter kit, created by yukuku: https://github.com/yukuku/telebot')
         elif 'what time' in text:
-            reply('look at the corner of your screen!')
+            reply('look at the corner of your screen,' + user_id)
         else:
             if getEnabled(chat_id):
                 reply('I got your message! (but I do not know how to answer)')
